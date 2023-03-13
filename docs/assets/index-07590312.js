@@ -1,1 +1,0 @@
-import{c as _,o as s}from"./index-10a4ca72.js";const a=(e,t)=>{const c=e.__vccOpts||e;for(const[n,o]of t)c[n]=o;return c},r={},d={class:"content",id:"content"};function f(e,t){return s(),_("div",d)}const l=a(r,[["render",f],["__scopeId","data-v-15989faf"]]);export{l as default};
