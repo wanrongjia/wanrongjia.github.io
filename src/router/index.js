@@ -21,10 +21,10 @@ router.beforeEach(async (to, from, next) => {
 	//动态标题
 	// document.title = to.meta.title ? `${to.meta.title}` : ``
 
-	// if(to.matched.length === 0){
-	// 	next({path: from.path || "/index"})
-	// 	return false
-	// }
+	if(to.matched.length === 0){
+		next({path: from.path || "/index"})
+		return false
+	}
 
 	beforeEach(to, from)
 	next();
