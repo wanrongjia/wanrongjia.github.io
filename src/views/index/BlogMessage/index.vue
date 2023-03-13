@@ -21,9 +21,26 @@ import { ref } from "vue"
 const list = ref([{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}])
 let open = ref(false)
 const detail = (data) => {
-	console.log(data)
 	open.value = true
 }
+console.log(document.querySelector(".info"))
+window.addEventListener("keydown",(res) => {
+	if(res.key === 'Escape'){
+		closeDialog()
+	} else if (res.key === 'F12'){
+		// res.preventDefault(); // 阻止默认事件行为
+		// res.returnValue = false
+	} else if (res.key === "s" && res.ctrlKey){
+		res.preventDefault(); // 阻止默认事件行为
+		res.returnValue = false
+	} else if (res.key === "v" && res.ctrlKey){
+		res.preventDefault(); // 阻止默认事件行为
+		res.returnValue = false
+	} else if (res.key === "x" && res.ctrlKey){
+		res.preventDefault(); // 阻止默认事件行为
+		res.returnValue = false
+	}
+})
 const closeDialog = () => {
 	if (open.value) open.value = false
 }
